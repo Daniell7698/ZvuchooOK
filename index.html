@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZvuchooOK</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>ZvuchooOK</header>
+
+<nav>
+  <button class="tab-btn active" data-tab="home">Главная</button>
+  <button class="tab-btn" data-tab="genres">Жанры</button>
+  <button class="tab-btn" data-tab="add">Добавить музыку</button>
+  <button class="tab-btn" data-tab="about">Обо мне</button>
+</nav>
+
+<main>
+  <section id="home" class="tab-content active">
+    <h2>Все треки</h2>
+    <ul id="allTracks" class="track-list"></ul>
+  </section>
+
+  <section id="genres" class="tab-content">
+    <h2>Музыка по жанрам</h2>
+    <div id="genreContainers"></div>
+  </section>
+
+  <section id="add" class="tab-content">
+    <h2>Добавить свою музыку</h2>
+    <form id="addTrackForm">
+      <label for="trackTitle">Название трека</label>
+      <input type="text" id="trackTitle" required />
+
+      <label for="trackArtist">Исполнитель</label>
+      <input type="text" id="trackArtist" required />
+
+      <label for="trackGenre">Жанр</label>
+      <select id="trackGenre" required>
+        <option value="">Выберите жанр</option>
+        <option>Поп</option>
+        <option>Рок</option>
+        <option>Хип-хоп</option>
+        <option>Электронная</option>
+        <option>Классика</option>
+      </select>
+
+      <label for="trackFile">Файл (mp3)</label>
+      <input type="file" id="trackFile" accept="audio/mp3" required />
+
+      <button type="submit">Добавить трек</button>
+    </form>
+  </section>
+
+  <section id="about" class="tab-content about-me">
+    <h2>Обо мне</h2>
+    <p>Разработчик: Банников Даниил Андреевич</p>
+    <p>Email: youngstarheash@yandex.ru</p>
+    <p>Телефон: +7 999 111-00-00</p>
+    <img src="фото.jpg" alt="Это он сделал" width="300" height="300" />
+
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
